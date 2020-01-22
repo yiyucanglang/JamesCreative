@@ -1,0 +1,136 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - HXConvenientListView (1.0.5):
+    - HXConvenientListView/Core (= 1.0.5)
+    - HXConvenientListView/List (= 1.0.5)
+  - HXConvenientListView/Core (1.0.5):
+    - Masonry
+  - HXConvenientListView/List (1.0.5):
+    - HXConvenientListView/Core
+  - HXExceptionGuard (0.0.2):
+    - RSSwizzle
+  - HXKitComponent (0.0.6):
+    - HXKitComponent/CoreHead (= 0.0.6)
+    - HXKitComponent/HXDataController (= 0.0.6)
+    - HXKitComponent/HXEmptyView (= 0.0.6)
+    - HXKitComponent/HXImgtextCombineView (= 0.0.6)
+    - HXKitComponent/HXTuple (= 0.0.6)
+  - HXKitComponent/CoreHead (0.0.6)
+  - HXKitComponent/HXCustomNaviBarView (0.0.6):
+    - HXKitComponent/HXImgtextCombineView
+    - HXKitComponent/HXMethodSwitch
+    - KVOController
+    - Masonry
+  - HXKitComponent/HXDataController (0.0.6):
+    - HXKitComponent/CoreHead
+    - HXKitComponent/HXTuple
+  - HXKitComponent/HXEmptyView (0.0.6):
+    - HXKitComponent/CoreHead
+    - Masonry
+  - HXKitComponent/HXImgtextCombineView (0.0.6):
+    - HXKitComponent/CoreHead
+    - Masonry
+  - HXKitComponent/HXMethodSwitch (0.0.6)
+  - HXKitComponent/HXTuple (0.0.6):
+    - HXKitComponent/CoreHead
+  - HXRouter (1.0.0)
+  - HXUIKits (0.0.7):
+    - HXUIKits/HXArrowAutoTipView (= 0.0.7)
+    - HXUIKits/HXRespondAreaExpandButton (= 0.0.7)
+    - HXUIKits/HXTimerButton (= 0.0.7)
+    - HXUIKits/HXWebView (= 0.0.7)
+  - HXUIKits/HXArrowAutoTipView (0.0.7):
+    - Masonry
+  - HXUIKits/HXCommonShareView (0.0.7):
+    - HXKitComponent/HXImgtextCombineView
+    - Masonry
+  - HXUIKits/HXRespondAreaExpandButton (0.0.7)
+  - HXUIKits/HXSegmentView (0.0.7):
+    - HXConvenientListView/Core
+  - HXUIKits/HXTimerButton (0.0.7):
+    - Masonry
+  - HXUIKits/HXWebView (0.0.7):
+    - KVOController
+    - Masonry
+  - HXUnionScrollView (1.1.3):
+    - HXConvenientListView/Core
+    - Masonry
+  - KVOController (1.2.0)
+  - Masonry (1.1.0)
+  - RSSwizzle (0.1.0)
+  - SDWebImage (5.3.2):
+    - SDWebImage/Core (= 5.3.2)
+  - SDWebImage/Core (5.3.2)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - HXConvenientListView
+  - HXExceptionGuard (= 0.0.2)
+  - HXKitComponent
+  - HXKitComponent/HXCustomNaviBarView
+  - HXKitComponent/HXMethodSwitch
+  - HXRouter (from `/Users/yijin/Documents/A_DHX/HXRouter`)
+  - HXUIKits
+  - HXUIKits/HXArrowAutoTipView
+  - HXUIKits/HXCommonShareView
+  - HXUIKits/HXSegmentView
+  - HXUnionScrollView (= 1.1.3)
+  - SDWebImage (~> 5.3.2)
+  - YYImage (= 1.0.4)
+
+SPEC REPOS:
+  "git@gitlab.zmaxis.com:yijin.zhou/zmparentspecs.git":
+    - HXConvenientListView
+    - HXExceptionGuard
+    - HXKitComponent
+    - HXUIKits
+    - HXUnionScrollView
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - HXConvenientListView
+    - HXKitComponent
+    - HXUIKits
+    - KVOController
+    - Masonry
+    - RSSwizzle
+    - SDWebImage
+    - YYImage
+
+EXTERNAL SOURCES:
+  HXRouter:
+    :path: "/Users/yijin/Documents/A_DHX/HXRouter"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  HXConvenientListView: 2816ea1fff3b04452b05babf75109770fcff3878
+  HXExceptionGuard: 62f9dd1662a6895d2ba3ac6d4c1f52620b5ccb8f
+  HXKitComponent: f84fa91639b2b86dca6e94d943ba4712de0eae3e
+  HXRouter: 060e2d32779600689c07db33c8a2993235a3b61a
+  HXUIKits: 340b1528013f485e5cf85b35c2a8d48f30ff3dab
+  HXUnionScrollView: 5a27430cd40e96d3be131a7215f7b9317ec1fe8b
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
+  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+
+PODFILE CHECKSUM: 98012a4f1498589a0256ff0a4315641a794722c0
+
+COCOAPODS: 1.8.4
