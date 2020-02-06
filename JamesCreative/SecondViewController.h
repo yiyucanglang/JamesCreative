@@ -15,6 +15,7 @@ static NSString const *a_query_age  = @"age";
 static NSString const *a_moduleURL  = @"james://message?name=111&age=12";
 
 static NSString *test = @"test";
+
 @interface SecondViewController : UIViewController
 
 @end

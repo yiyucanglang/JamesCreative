@@ -43,7 +43,7 @@ pod 'HXUIKits'
 #pod 'HXUIKits', :path => '/Users/yijin/Documents/A_DHX/HXUIKits/'
 #pod 'ZMParentLib', :path => '/Users/yijin/workspace/ZMParentLib'
 
-pod 'HXRouter', :path => '/Users/yijin/Documents/A_DHX/HXRouter'
+pod 'DHXRouter'
 end
 
 

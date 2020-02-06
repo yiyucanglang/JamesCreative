@@ -11,6 +11,10 @@
 
 #import "HXRouter.h"
 
+static NSString * const RouterNamespace_JamesTestProject = @"JamesTestProject";
+
+static NSString * const RouterURLString_MainServiceName = @"";
+
 //Module_A
 static NSString * const RouterURLString_AModule = @"parent://modulea";
 //parameters sample: {@"id" : @"333"}

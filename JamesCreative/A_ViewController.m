@@ -12,7 +12,7 @@
 
 #import "ParentRouterHeader.h"
 
-HXMacroReigisterService(A_ViewController, RouterURLString_AModule)
+HXMacroReigisterService(A_ViewController, RouterURLString_AModule, RouterNamespace_JamesTestProject)
 
 
 @interface A_ViewController ()
@@ -86,7 +86,7 @@ HXMacroReigisterService(A_ViewController, RouterURLString_AModule)
     printf("OSSpinLock:               %.2f ms\n", (end - begin) * 1000);
     
     NSInteger sasss;
-    if ([[HXRouter sharedManager] canHandlerURLString:[NSString stringWithFormat:@"parent://paper/index/%@", @(400)]]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:[NSString stringWithFormat:@"parent://paper/index/%@", @(400)] serverNamespace:RouterNamespace_JamesTestProject]) {
         sasss  = 200 + 300;
     }
     

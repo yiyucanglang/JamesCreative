@@ -59,7 +59,12 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
     [btns addTarget:self action:@selector(testImage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btns];
 
-    
+    NSString *urlString = @"https://www/";
+    NSCharacterSet *encodeUrlSet = [NSCharacterSet URLQueryAllowedCharacterSet];
+    NSString *encodeUrl = [urlString stringByAddingPercentEncodingWithAllowedCharacters:encodeUrlSet];
+    NSURL *url = [NSURL URLWithString:encodeUrl];
+    NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
+    NSLog(@"url:%@", url);
 }
 
 
@@ -86,10 +91,10 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
 //    ViewController *zzz = [[HXRouter sharedManager] getServiceEntityWithURLString:encodeUrl nativeParameters:@{HXRouterModuleTransitioningStyleKey : @(HXModuleTransitioningStyle_Presenting), HXRouterIDKey : @"22", HXRouterNameKey : @"试卷详情"}];
     
     
-    [[HXRouter sharedManager] handleURLString:RouterURLString_BModule];
+    [[HXRouter sharedManager] handleURLString:RouterURLString_BModule serverNamespace:RouterNamespace_JamesTestProject];
     return;
     
-    [[HXRouter sharedManager] handleURLString:encodeUrl nativeParameters:@{HXRouterModuleTransitioningStyleKey : @(HXModuleTransitioningStyle_Presenting), HXRouterIDKey : @"22", HXRouterNameKey : @"试卷详情"} serviceCompletionHandler:^(id  _Nullable resultData, NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
+    [[HXRouter sharedManager] handleURLString:encodeUrl serverNamespace:RouterNamespace_JamesTestProject nativeParameters:@{HXRouterModuleTransitioningStyleKey : @(HXModuleTransitioningStyle_Presenting), HXRouterIDKey : @"22", HXRouterNameKey : @"试卷详情"} serviceCompletionHandler:^(id  _Nullable resultData, NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
         NSLog(@"reslutdata:%@", resultData);
     } routerSearchCompletion:^(NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
         NSLog(@"error:%@", error);
@@ -208,23 +213,23 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
         NSLog(@"1111111");
     }
     
-    if ([[HXRouter sharedManager] canHandlerURLString:a1]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:a1 serverNamespace:RouterNamespace_JamesTestProject]) {
         NSLog(@"canhandle:%@", a1);
     }
-    if ([[HXRouter sharedManager] canHandlerURLString:a2]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:a2 serverNamespace:RouterNamespace_JamesTestProject]) {
         NSLog(@"canhandle:%@", a2);
     }
-    if ([[HXRouter sharedManager] canHandlerURLString:a3]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:a3 serverNamespace:RouterNamespace_JamesTestProject]) {
         NSLog(@"canhandle:%@", a3);
     }
-    if ([[HXRouter sharedManager] canHandlerURLString:a4]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:a4 serverNamespace:RouterNamespace_JamesTestProject]) {
         NSLog(@"canhandle:%@", a4);
     }
-    if ([[HXRouter sharedManager] canHandlerURLString:a5]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:a5 serverNamespace:RouterNamespace_JamesTestProject]) {
         NSLog(@"canhandle:%@", a5);
     }
     
-    if ([[HXRouter sharedManager] canHandlerURLString:@"parent://paper/submodule/ssssss"]) {
+    if ([[HXRouter sharedManager] canHandlerURLString:@"parent://paper/submodule/ssssss" serverNamespace:RouterNamespace_JamesTestProject]) {
         NSLog(@"canhanssssssdle:%@", a5);
     }
     

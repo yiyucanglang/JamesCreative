@@ -12,7 +12,7 @@
 #import "HXRouter.h"
 #import "ParentRouterHeader.h"
 
-HXMacroReigisterService(ModubleBHandler, RouterURLString_BModule)
+HXMacroReigisterService(ModubleBHandler, RouterURLString_BModule, RouterNamespace_JamesTestProject)
 
 @implementation ModubleBHandler
 
@@ -25,7 +25,7 @@ HXMacroReigisterService(ModubleBHandler, RouterURLString_BModule)
 
 - (BOOL)shouldHandleWithRequest:(HXRouterRequest *)request error:(NSError *__autoreleasing  _Nullable *)error {
     
-    [[HXRouter sharedManager] handleURLString:@"parent://modulea" nativeParameters:@{HXRouterModuleTransitioningStyleKey : @(HXModuleTransitioningStyle_Presenting)} serviceCompletionHandler:^(id  _Nullable resultData, NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
+    [[HXRouter sharedManager] handleURLString:@"parent://modulea" serverNamespace:RouterNamespace_JamesTestProject  nativeParameters:@{HXRouterModuleTransitioningStyleKey : @(HXModuleTransitioningStyle_Presenting)} serviceCompletionHandler:^(id  _Nullable resultData, NSError * _Nullable error, NSDictionary * _Nullable userInfo) {
         [self handleRequest:request];
     }];
     return NO;
