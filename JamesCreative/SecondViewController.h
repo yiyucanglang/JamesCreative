@@ -10,6 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define kImagePath(bundle, imageName, type, directoryName) [bundle pathForResource:[NSString stringWithFormat:@"%@@%@x", imageName, @([UIScreen mainScreen].scale)] ofType:type inDirectory:directoryName]
+
+#define kimage(bundle, imageName, type, directoryName) [UIImage imageWithContentsOfFile:kImagePath(bundle, imageName, type, directoryName)]
+
 static NSString const *a_query_name = @"name";
 static NSString const *a_query_age  = @"age";
 static NSString const *a_moduleURL  = @"james://message?name=111&age=12";

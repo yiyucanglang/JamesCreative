@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString  *passwordForAuthorizationHeaderField;
 
 
-/// default 15 unit:second
+/// Default: 15s
 @property (nonatomic, assign) NSTimeInterval   requestTimeoutInterval;
 
 

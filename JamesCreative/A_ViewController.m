@@ -12,6 +12,8 @@
 
 #import "ParentRouterHeader.h"
 
+#import <AFNetworking/AFNetworking.h>
+
 HXMacroReigisterService(A_ViewController, RouterURLString_AModule, RouterNamespace_JamesTestProject)
 
 
@@ -48,6 +50,38 @@ HXMacroReigisterService(A_ViewController, RouterURLString_AModule, RouterNamespa
     NSLog(@"request:%@", self.routeRequest.parameters);
     
 //    [self testRoute];
+    
+    
+    NSString *baseURLString = @"https://app-gateway.zmlearn.com";
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    AFJSONRequestSerializer *jsonSerializer = [AFJSONRequestSerializer serializer];
+    
+    
+    NSMutableURLRequest *request = [jsonSerializer requestWithMethod:@"POST" URLString:[NSString stringWithFormat:@"%@/parentsApi/v2/global/systemConfigs", baseURLString] parameters:nil error:nil];
+    [request setAllHTTPHeaderFields:[self commonHeaderFiled]];
+    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        NSLog(@"zzzz:%@", responseObject);
+    }];
+    
+    [task resume];
+}
+
+ - (NSDictionary *)commonHeaderFiled {
+    NSMutableDictionary *header = [NSMutableDictionary new];
+    header[@"version"]          = @"3.1.3";
+    header[@"platform"]         = @"iOS_iPhone";
+    header[@"Api-Version"]      = @"3.1.3";
+    header[@"accessToken"]      = @"";
+    header[@"version-code"]     = @"313";
+    header[@"device-token"]     = @"";
+    return header;
 }
 
 - (void)testImage {

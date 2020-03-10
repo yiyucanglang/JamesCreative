@@ -24,13 +24,22 @@
 #import <objc/runtime.h>
 
 #import "ParentRouterHeader.h"
+#import "HXNetKit.h"
+
+
+
+#define kImagePath(bundle, imageName, type, directoryName) [bundle pathForResource:[NSString stringWithFormat:@"%@@%@x", imageName, @([UIScreen mainScreen].scale)] ofType:type inDirectory:directoryName]
+
+#define kimage(bundle, imageName, type, directoryName) [UIImage imageWithContentsOfFile:kImagePath(bundle, imageName, type, directoryName)]
+
+#define kAIClassFeedBackImage(bundle, imageName) kimage(bundle, imageName, @"png", @"Feedback")
 
 NSString *const XXVCLoginSuccessNotification = @"sssss";
 
 @import HXUIKits;
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation ViewController
@@ -47,6 +56,13 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
    [btn addTarget:self action:@selector(testTwo) forControlEvents:UIControlEventTouchUpInside];
    btn.backgroundColor = [UIColor redColor];
    [self.view addSubview:btn];
+    
+    
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(80, CGRectGetMaxY(btn.frame) + 20, 200, 40)];
+    [btn1 setTitle:@"跳转C_Module" forState:UIControlStateNormal];
+    [btn1 addTarget:self action:@selector(_jumpC) forControlEvents:UIControlEventTouchUpInside];
+    btn1.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn1];
    
     MiddleTeacher *mid = [MiddleTeacher new];
     [mid zzzz];
@@ -65,13 +81,57 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
     NSURL *url = [NSURL URLWithString:encodeUrl];
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
     NSLog(@"url:%@", url);
+    
+    UIFont *ddd = [UIFont fontWithName:@"ddddd" size:20];
+    
+    HXNetRequest *req = [HXNetRequest new];
+//    req.requestURLString = @"sssss";
+    NSInteger sss = -1;
+    if (sss) {
+        NSLog(@"zzzzzzzzzz");
+    }
+    
+    
+    
 }
 
+- (void)_jumpC {
+    [[HXRouter sharedManager] handleURLString:RouterURLString_CModule serverNamespace:RouterNamespace_JamesTestProject];
+}
 
+- (void)bundleTest {
+        UIImageView *ss = [[UIImageView alloc] initWithFrame:CGRectMake(100 + 100, 100, 200, 200)];
+        [self.view addSubview:ss];
+        
+        NSString *bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Image.bundle"];
+        NSBundle *imageBundle = [NSBundle bundleWithPath:bundlePath];
+        
+    //    ss.image = [UIImage imageNamed:@"aiclass_selectbox_selected" inBundle:imageBundle compatibleWithTraitCollection:nil];
+
+    //    ss.image = [UIImage imageNamed:@"aiclass_feedback_close" inBundle:imageBundle compatibleWithTraitCollection:nil];
+        
+        NSString *imageName = [NSString stringWithFormat:@"%@@%@x", @"aiclass_feedback_close", @([UIScreen mainScreen].scale)];
+        
+        NSString *imagePath = kImagePath(imageBundle, @"aiclass_feedback_close", @"png", @"Feedback");//[imageBundle pathForResource:imageName ofType:@"png" inDirectory:@"Feedback"];
+        UIImage *image = kimage(imageBundle, @"aiclass_feedback_close", @"png", @"Feedback"); // [UIImage imageWithContentsOfFile:imagePath];//kimage(imageBundle, @"aiclass_feedback_close", @"png", @"Feedback"); /
+        ss.image = kAIClassFeedBackImage(imageBundle, @"aiclass_feedback_close");
+    //    [UIScreen mainScreen].scale
+      
+     NSTimeInterval begin, end;
+    begin = CACurrentMediaTime();
+    end = CACurrentMediaTime();
+    
+    printf("OSSpinLock:               %8.2f ms\n", (end - begin) * 1000);
+        
+}
 
 #pragma mark -testTwo
 - (void)testTwo {
     
+    [self.view endEditing:YES];
+    NSLog(@"zzzzzz");
+    
+    return;
     NSDictionary *dic = @{
         @"zzzzz" : @"dddddd",
         @"number" : @(20),

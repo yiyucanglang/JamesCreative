@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		557321EF23F4F6B000C6DBB4 /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 557321EE23F4F6B000C6DBB4 /* Image.bundle */; };
+		557321F323F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 557321F223F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m */; };
+		557321F623F65E8D00C6DBB4 /* HXNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 557321F523F65E8D00C6DBB4 /* HXNetRequest.m */; };
+		557B33692408F53700475F44 /* HXNetKitUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B33682408F53700475F44 /* HXNetKitUtility.m */; };
+		559B66CB23FBE1D00097FA46 /* HXNetBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B66CA23FBE1CF0097FA46 /* HXNetBaseRequest.m */; };
+		559B66CE23FBE3DB0097FA46 /* HXNetRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B66CD23FBE3DB0097FA46 /* HXNetRequestManager.m */; };
+		55D0EDC7240E6C630076290B /* C_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0EDC6240E6C630076290B /* C_ViewController.m */; };
+		55D0EDCA240E76950076290B /* HXCollectionViewTestItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0EDC9240E76950076290B /* HXCollectionViewTestItemView.m */; };
+		55D0EDCE240F4FC70076290B /* LMJVerticalFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0EDCD240F4FC70076290B /* LMJVerticalFlowLayout.m */; };
 		99D757D710BA85AB5C96DFAF /* Pods_JamesCreative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B96D8A4281248BDC4B5EEC /* Pods_JamesCreative.framework */; };
 		E93675672397DFA2007A10CE /* MiddleTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = E93675662397DFA2007A10CE /* MiddleTeacher.m */; };
 		E936756A2397DFB8007A10CE /* Teacher+ZZZ.m in Sources */ = {isa = PBXBuildFile; fileRef = E93675692397DFB8007A10CE /* Teacher+ZZZ.m */; };
@@ -68,6 +77,25 @@
 /* Begin PBXFileReference section */
 		14B96D8A4281248BDC4B5EEC /* Pods_JamesCreative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JamesCreative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BE14BF80375A1DAA948F8B /* Pods-JamesCreative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JamesCreative.release.xcconfig"; path = "Target Support Files/Pods-JamesCreative/Pods-JamesCreative.release.xcconfig"; sourceTree = "<group>"; };
+		326A51649B1D44AEDA470F3F /* Pods-JamesCreative.uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JamesCreative.uat.xcconfig"; path = "Target Support Files/Pods-JamesCreative/Pods-JamesCreative.uat.xcconfig"; sourceTree = "<group>"; };
+		557321EE23F4F6B000C6DBB4 /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
+		557321F123F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetRequestGlobalConfig.h; sourceTree = "<group>"; };
+		557321F223F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetRequestGlobalConfig.m; sourceTree = "<group>"; };
+		557321F423F65E8D00C6DBB4 /* HXNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetRequest.h; sourceTree = "<group>"; };
+		557321F523F65E8D00C6DBB4 /* HXNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetRequest.m; sourceTree = "<group>"; };
+		557321F723F65EF500C6DBB4 /* HXNetKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetKit.h; sourceTree = "<group>"; };
+		557B33672408F53600475F44 /* HXNetKitUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetKitUtility.h; sourceTree = "<group>"; };
+		557B33682408F53700475F44 /* HXNetKitUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetKitUtility.m; sourceTree = "<group>"; };
+		559B66C923FBE1CF0097FA46 /* HXNetBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetBaseRequest.h; sourceTree = "<group>"; };
+		559B66CA23FBE1CF0097FA46 /* HXNetBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetBaseRequest.m; sourceTree = "<group>"; };
+		559B66CC23FBE3DB0097FA46 /* HXNetRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetRequestManager.h; sourceTree = "<group>"; };
+		559B66CD23FBE3DB0097FA46 /* HXNetRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetRequestManager.m; sourceTree = "<group>"; };
+		55D0EDC5240E6C630076290B /* C_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C_ViewController.h; sourceTree = "<group>"; };
+		55D0EDC6240E6C630076290B /* C_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C_ViewController.m; sourceTree = "<group>"; };
+		55D0EDC8240E76950076290B /* HXCollectionViewTestItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXCollectionViewTestItemView.h; sourceTree = "<group>"; };
+		55D0EDC9240E76950076290B /* HXCollectionViewTestItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCollectionViewTestItemView.m; sourceTree = "<group>"; };
+		55D0EDCC240F4FC70076290B /* LMJVerticalFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJVerticalFlowLayout.h; sourceTree = "<group>"; };
+		55D0EDCD240F4FC70076290B /* LMJVerticalFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJVerticalFlowLayout.m; sourceTree = "<group>"; };
 		A00951A9852759B125A27D98 /* Pods-JamesCreative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JamesCreative.debug.xcconfig"; path = "Target Support Files/Pods-JamesCreative/Pods-JamesCreative.debug.xcconfig"; sourceTree = "<group>"; };
 		E93675652397DFA2007A10CE /* MiddleTeacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleTeacher.h; sourceTree = "<group>"; };
 		E93675662397DFA2007A10CE /* MiddleTeacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleTeacher.m; sourceTree = "<group>"; };
@@ -176,11 +204,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		557321ED23F4F68A00C6DBB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				557321EE23F4F6B000C6DBB4 /* Image.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		557321F023F65B8F00C6DBB4 /* HXNetKit */ = {
+			isa = PBXGroup;
+			children = (
+				557321F123F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.h */,
+				557321F223F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m */,
+				559B66CC23FBE3DB0097FA46 /* HXNetRequestManager.h */,
+				559B66CD23FBE3DB0097FA46 /* HXNetRequestManager.m */,
+				559B66C923FBE1CF0097FA46 /* HXNetBaseRequest.h */,
+				559B66CA23FBE1CF0097FA46 /* HXNetBaseRequest.m */,
+				557321F423F65E8D00C6DBB4 /* HXNetRequest.h */,
+				557321F523F65E8D00C6DBB4 /* HXNetRequest.m */,
+				557321F723F65EF500C6DBB4 /* HXNetKit.h */,
+				557B33672408F53600475F44 /* HXNetKitUtility.h */,
+				557B33682408F53700475F44 /* HXNetKitUtility.m */,
+			);
+			path = HXNetKit;
+			sourceTree = "<group>";
+		};
+		55D0EDCB240F4FA80076290B /* flowlayout */ = {
+			isa = PBXGroup;
+			children = (
+				55D0EDCC240F4FC70076290B /* LMJVerticalFlowLayout.h */,
+				55D0EDCD240F4FC70076290B /* LMJVerticalFlowLayout.m */,
+			);
+			path = flowlayout;
+			sourceTree = "<group>";
+		};
 		6958C49D04B80002A2673CF7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A00951A9852759B125A27D98 /* Pods-JamesCreative.debug.xcconfig */,
 				27BE14BF80375A1DAA948F8B /* Pods-JamesCreative.release.xcconfig */,
+				326A51649B1D44AEDA470F3F /* Pods-JamesCreative.uat.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -293,12 +357,15 @@
 		E99017862385311C004E7D7D /* JamesCreative */ = {
 			isa = PBXGroup;
 			children = (
+				557321F023F65B8F00C6DBB4 /* HXNetKit */,
+				557321ED23F4F68A00C6DBB4 /* Resources */,
 				E95F9C0D238BDEB0003D745F /* Test */,
 				E93771962386784100CDC588 /* HXEasyNetWorking */,
 				E9377179238631AB00CDC588 /* YTKNetwork */,
 				E93771632386300300CDC588 /* FileManager */,
 				E99017C02385641E004E7D7D /* Launch */,
 				E99017BC238532E9004E7D7D /* TabbarController */,
+				55D0EDCB240F4FA80076290B /* flowlayout */,
 				E99017872385311C004E7D7D /* AppDelegate.h */,
 				E99017882385311C004E7D7D /* AppDelegate.m */,
 				E990178D2385311C004E7D7D /* ViewController.h */,
@@ -310,6 +377,10 @@
 				E9CF4CD223B4A5830040ED9B /* ModuleInterfaceHeader.h */,
 				E9CF4CD323B4A69A0040ED9B /* A_ViewController.h */,
 				E9CF4CD423B4A69A0040ED9B /* A_ViewController.m */,
+				55D0EDC5240E6C630076290B /* C_ViewController.h */,
+				55D0EDC6240E6C630076290B /* C_ViewController.m */,
+				55D0EDC8240E76950076290B /* HXCollectionViewTestItemView.h */,
+				55D0EDC9240E76950076290B /* HXCollectionViewTestItemView.m */,
 				E9A9D1C423D6FDB5007F385F /* ModubleBHandler.h */,
 				E9A9D1C523D6FDB5007F385F /* ModubleBHandler.m */,
 				E9A9D1CA23D7380B007F385F /* ModuleCHandler.h */,
@@ -469,6 +540,7 @@
 				E990179723853120004E7D7D /* LaunchScreen.storyboard in Resources */,
 				E99017C623856638004E7D7D /* 640x960.png in Resources */,
 				E99017C4238565E4004E7D7D /* 1242x2208.png in Resources */,
+				557321EF23F4F6B000C6DBB4 /* Image.bundle in Resources */,
 				E99017C223856434004E7D7D /* 1242_2688.png in Resources */,
 				E990179423853120004E7D7D /* Assets.xcassets in Resources */,
 			);
@@ -556,15 +628,23 @@
 			files = (
 				E9377195238631AB00CDC588 /* YTKRequest.m in Sources */,
 				E93675702397ED84007A10CE /* LowTeacher.m in Sources */,
+				55D0EDCA240E76950076290B /* HXCollectionViewTestItemView.m in Sources */,
+				557321F323F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m in Sources */,
 				E9377193238631AB00CDC588 /* YTKChainRequestAgent.m in Sources */,
 				E95F9C10238BDECF003D745F /* Person.m in Sources */,
 				E990178F2385311C004E7D7D /* ViewController.m in Sources */,
+				559B66CB23FBE1D00097FA46 /* HXNetBaseRequest.m in Sources */,
 				E93771A6238693A900CDC588 /* HXEasyRequestResponse.m in Sources */,
 				E937718D238631AB00CDC588 /* YTKNetworkConfig.m in Sources */,
+				55D0EDCE240F4FC70076290B /* LMJVerticalFlowLayout.m in Sources */,
 				E937718F238631AB00CDC588 /* YTKNetworkPrivate.m in Sources */,
+				55D0EDC7240E6C630076290B /* C_ViewController.m in Sources */,
 				E937718E238631AB00CDC588 /* YTKChainRequest.m in Sources */,
 				E93771A22386796400CDC588 /* HXEasyRequestLogger.m in Sources */,
+				557321F623F65E8D00C6DBB4 /* HXNetRequest.m in Sources */,
 				E99017892385311C004E7D7D /* AppDelegate.m in Sources */,
+				559B66CE23FBE3DB0097FA46 /* HXNetRequestManager.m in Sources */,
+				557B33692408F53700475F44 /* HXNetKitUtility.m in Sources */,
 				E9377199238678BC00CDC588 /* HXEasyRequest.m in Sources */,
 				E936C508238E66EA0094A316 /* SecondViewController.m in Sources */,
 				E99017BF23853335004E7D7D /* HXFlexibleTabbarViewController.m in Sources */,
@@ -631,6 +711,121 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		557690D22403BD0700AF7C9C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = UAT;
+		};
+		557690D32403BD0700AF7C9C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 326A51649B1D44AEDA470F3F /* Pods-JamesCreative.uat.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 255T83HNNK;
+				INFOPLIST_FILE = JamesCreative/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativssss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = UAT;
+		};
+		557690D42403BD0700AF7C9C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G85P225WDH;
+				INFOPLIST_FILE = JamesCreativeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JamesCreative.app/JamesCreative";
+			};
+			name = UAT;
+		};
+		557690D52403BD0700AF7C9C /* UAT */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G85P225WDH;
+				INFOPLIST_FILE = JamesCreativeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JamesCreative;
+			};
+			name = UAT;
+		};
 		E99017B123853120004E7D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -747,14 +942,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G85P225WDH;
+				DEVELOPMENT_TEAM = 255T83HNNK;
 				INFOPLIST_FILE = JamesCreative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreative;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -766,14 +961,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G85P225WDH;
+				DEVELOPMENT_TEAM = 255T83HNNK;
 				INFOPLIST_FILE = JamesCreative/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreative;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -862,6 +1057,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E99017B123853120004E7D7D /* Debug */,
+				557690D22403BD0700AF7C9C /* UAT */,
 				E99017B223853120004E7D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -871,6 +1067,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E99017B423853120004E7D7D /* Debug */,
+				557690D32403BD0700AF7C9C /* UAT */,
 				E99017B523853120004E7D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -880,6 +1077,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E99017B723853120004E7D7D /* Debug */,
+				557690D42403BD0700AF7C9C /* UAT */,
 				E99017B823853120004E7D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -889,6 +1087,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E99017BA23853120004E7D7D /* Debug */,
+				557690D52403BD0700AF7C9C /* UAT */,
 				E99017BB23853120004E7D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

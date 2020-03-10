@@ -8,11 +8,11 @@ platform:ios, '8.0'
 target 'JamesCreative' do
 use_frameworks!
 
-pod 'AFNetworking'
+pod 'AFNetworking', '3.2.1'
 pod 'SDWebImage', '~> 5.3.2'
 #pod 'HXConvenientListView', '1.0.4'
-pod 'HXConvenientListView'
-#pod 'HXConvenientListView', :path => '/Users/yijin/Documents/A_DHX/HXConvenientListView'
+#pod 'HXConvenientListView'
+pod 'HXConvenientListView', :path => '/Users/zhouyijin/Documents/A_DHX/HXConvenientListView'
 pod 'YYImage', '1.0.4'
 #pod 'HXKitComponent/HXMethodSwitch', '0.0.6'
 #pod 'HXKitComponent'
@@ -22,6 +22,7 @@ pod 'YYImage', '1.0.4'
 
 pod 'HXKitComponent/HXCustomNaviBarView'
 pod 'HXKitComponent/HXMethodSwitch'
+
 pod 'HXKitComponent'
 
 #pod 'HXKitComponent/HXCustomNaviBarView', :path => '/Users/yijin/Documents/A_DHX/HXKitComponent/'
@@ -43,7 +44,7 @@ pod 'HXUIKits'
 #pod 'HXUIKits', :path => '/Users/yijin/Documents/A_DHX/HXUIKits/'
 #pod 'ZMParentLib', :path => '/Users/yijin/workspace/ZMParentLib'
 
-pod 'DHXRouter'
+pod 'DHXRouter', '1.0.0'
 end
 
 

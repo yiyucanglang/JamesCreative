@@ -16,9 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HXEasyRequest : NSObject
 #pragma mark -Config
 
-/**
- set absoulute url path or relative url path to the property
- */
+/// Set an absoulute or relative url path to the property
 @property (nonatomic, copy) NSString  *requestURLStr;
 
 @property (nonatomic, assign) HXEasyRequestMethodType   requestType;

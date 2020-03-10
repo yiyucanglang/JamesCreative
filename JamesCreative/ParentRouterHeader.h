@@ -24,4 +24,8 @@ static NSString * const RouterURLString_BModule = @"parent://moduleb";
 //parameters sample: {@"id" : @"333"}
 
 
+//Module_C
+static NSString * const RouterURLString_CModule = @"parent://modulec";
+
+
 #endif /* ParentRouterHeader_h */
