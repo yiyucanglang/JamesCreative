@@ -9,6 +9,9 @@
 #import "LowTeacher.h"
 
 @implementation LowTeacher
++ (void)load {
+    NSLog(@"LowTeacher");
+}
 //+ (void)initialize{
 //
 //    NSLog(@"LowTeacher + initialize");

@@ -10,6 +10,7 @@
 		557321EF23F4F6B000C6DBB4 /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 557321EE23F4F6B000C6DBB4 /* Image.bundle */; };
 		557321F323F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 557321F223F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m */; };
 		557321F623F65E8D00C6DBB4 /* HXNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 557321F523F65E8D00C6DBB4 /* HXNetRequest.m */; };
+		5578C6CE2430717D00012C8F /* LeetCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5578C6CD2430717C00012C8F /* LeetCodeViewController.m */; };
 		557B33692408F53700475F44 /* HXNetKitUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B33682408F53700475F44 /* HXNetKitUtility.m */; };
 		559B66CB23FBE1D00097FA46 /* HXNetBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B66CA23FBE1CF0097FA46 /* HXNetBaseRequest.m */; };
 		559B66CE23FBE3DB0097FA46 /* HXNetRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B66CD23FBE3DB0097FA46 /* HXNetRequestManager.m */; };
@@ -84,6 +85,8 @@
 		557321F423F65E8D00C6DBB4 /* HXNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetRequest.h; sourceTree = "<group>"; };
 		557321F523F65E8D00C6DBB4 /* HXNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetRequest.m; sourceTree = "<group>"; };
 		557321F723F65EF500C6DBB4 /* HXNetKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetKit.h; sourceTree = "<group>"; };
+		5578C6CC2430717C00012C8F /* LeetCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCodeViewController.h; sourceTree = "<group>"; };
+		5578C6CD2430717C00012C8F /* LeetCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeViewController.m; sourceTree = "<group>"; };
 		557B33672408F53600475F44 /* HXNetKitUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetKitUtility.h; sourceTree = "<group>"; };
 		557B33682408F53700475F44 /* HXNetKitUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNetKitUtility.m; sourceTree = "<group>"; };
 		559B66C923FBE1CF0097FA46 /* HXNetBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNetBaseRequest.h; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 				E9CF4CD423B4A69A0040ED9B /* A_ViewController.m */,
 				55D0EDC5240E6C630076290B /* C_ViewController.h */,
 				55D0EDC6240E6C630076290B /* C_ViewController.m */,
+				5578C6CC2430717C00012C8F /* LeetCodeViewController.h */,
+				5578C6CD2430717C00012C8F /* LeetCodeViewController.m */,
 				55D0EDC8240E76950076290B /* HXCollectionViewTestItemView.h */,
 				55D0EDC9240E76950076290B /* HXCollectionViewTestItemView.m */,
 				E9A9D1C423D6FDB5007F385F /* ModubleBHandler.h */,
@@ -657,6 +662,7 @@
 				E936756A2397DFB8007A10CE /* Teacher+ZZZ.m in Sources */,
 				E936756D2397E706007A10CE /* MiddleTeacher+SDASDASD.m in Sources */,
 				E9A9D1C623D6FDB5007F385F /* ModubleBHandler.m in Sources */,
+				5578C6CE2430717D00012C8F /* LeetCodeViewController.m in Sources */,
 				E9623C2B23BF3AC2000BB5BE /* TestView.m in Sources */,
 				E95F9C16238BDF1E003D745F /* Teacher+Test.m in Sources */,
 				E937719F2386791E00CDC588 /* HXEasyRequestGlobalConfig.m in Sources */,

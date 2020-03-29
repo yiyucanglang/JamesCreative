@@ -28,4 +28,8 @@ static NSString * const RouterURLString_BModule = @"parent://moduleb";
 static NSString * const RouterURLString_CModule = @"parent://modulec";
 
 
+//Module_LeetCode
+static NSString * const RouterURLString_LeetCodeModule = @"parent://leetcode";
+
+
 #endif /* ParentRouterHeader_h */

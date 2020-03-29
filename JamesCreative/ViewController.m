@@ -63,6 +63,12 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
     [btn1 addTarget:self action:@selector(_jumpC) forControlEvents:UIControlEventTouchUpInside];
     btn1.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn1];
+    
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(80, CGRectGetMaxY(btn1.frame) + 20, 200, 40)];
+    [btn2 setTitle:@"Leetcode" forState:UIControlStateNormal];
+    [btn2 addTarget:self action:@selector(_jumpLeetcode) forControlEvents:UIControlEventTouchUpInside];
+    btn2.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn2];
    
     MiddleTeacher *mid = [MiddleTeacher new];
     [mid zzzz];
@@ -97,6 +103,10 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
 
 - (void)_jumpC {
     [[HXRouter sharedManager] handleURLString:RouterURLString_CModule serverNamespace:RouterNamespace_JamesTestProject];
+}
+
+- (void)_jumpLeetcode {
+    [[HXRouter sharedManager] handleURLString:RouterURLString_LeetCodeModule serverNamespace:RouterNamespace_JamesTestProject];
 }
 
 - (void)bundleTest {
