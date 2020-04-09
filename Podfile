@@ -7,12 +7,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform:ios, '8.0'
 target 'JamesCreative' do
 use_frameworks!
-
 pod 'AFNetworking', '3.2.1'
 pod 'SDWebImage', '~> 5.3.2'
 #pod 'HXConvenientListView', '1.0.4'
 #pod 'HXConvenientListView'
-pod 'HXConvenientListView', :path => '/Users/zhouyijin/Documents/A_DHX/HXConvenientListView'
+pod 'HXConvenientListView', :path => '/Users/yijin/Documents/A_DHX/HXConvenientListView'
 pod 'YYImage', '1.0.4'
 #pod 'HXKitComponent/HXMethodSwitch', '0.0.6'
 #pod 'HXKitComponent'
@@ -45,7 +44,10 @@ pod 'HXUIKits'
 #pod 'ZMParentLib', :path => '/Users/yijin/workspace/ZMParentLib'
 
 pod 'DHXRouter', '1.0.0'
+pod 'TestCommunity', :path => '/Users/yijin/Documents/A_DHX/HXRouter/HXRouterDemo/Community'
+pod 'HXUniformLoader', :path => '/Users/yijin/Documents/A_DHX/HXUniformLoader'
 end
+
 
 
 

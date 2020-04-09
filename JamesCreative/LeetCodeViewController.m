@@ -11,6 +11,40 @@
 
 HXMacroReigisterService(LeetCodeViewController, RouterURLString_LeetCodeModule, RouterNamespace_JamesTestProject)
 
+
+@interface TreeNode : NSObject
+@property (nonatomic, assign) NSInteger   value;
+@property (nonatomic, strong) TreeNode  *leftNode;
+@property (nonatomic, strong) TreeNode  *rightNode;
+
+- (void)exchangedLeftRightNode;
+
++ (TreeNode *)reverseBinaryTree:(TreeNode *)root;
+@end
+
+@implementation TreeNode
+
+- (void)exchangedLeftRightNode {
+    if (self) {
+        TreeNode *node  = self.leftNode;
+        self.leftNode = self.rightNode;
+        self.rightNode = node;
+    }
+}
+
++ (TreeNode *)reverseBinaryTree:(TreeNode *)root {
+    if (!root) {
+        return nil;
+    }
+    [TreeNode reverseBinaryTree:root.leftNode];
+    [TreeNode reverseBinaryTree:root.rightNode];
+    [root exchangedLeftRightNode];
+    return root;
+}
+
+@end
+
+
 @interface LeetCodeViewController ()
 
 @end
@@ -41,9 +75,29 @@ HXMacroReigisterService(LeetCodeViewController, RouterURLString_LeetCodeModule, 
     
     //kmpTest
 //    [self _kmpTest];
+    
+    //反转二叉树
+    [self _reverseBinaryTree];
 }
 
-#pragma mark -
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CATransition *transition = [CATransition animation];
+    transition.startProgress = 0;//开始进度
+    transition.endProgress = 1;//结束进度
+    transition.type = kCATransitionReveal;//过渡类型
+    transition.subtype = kCATransitionFromLeft;//过渡方向
+    transition.duration = 1.f;
+    UIColor *color = [UIColor colorWithRed:arc4random_uniform(255) / 255.0 green:arc4random_uniform(255) / 255.0 blue:arc4random_uniform(255) / 255.0 alpha:1.f];
+    self.view.layer.backgroundColor = color.CGColor;
+    [self.view.layer addAnimation:transition forKey:@"transition"];
+}
+
+#pragma mark - 反转二叉树
+- (void)_reverseBinaryTree {
+    TreeNode *node = [TreeNode new];
+    node = [TreeNode reverseBinaryTree:node];
+}
+
 
 #pragma mark - KMP算法
 - (void)_kmpTest {

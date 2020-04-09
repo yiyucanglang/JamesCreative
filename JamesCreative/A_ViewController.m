@@ -27,7 +27,7 @@ HXMacroReigisterService(A_ViewController, RouterURLString_AModule, RouterNamespa
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Module_A";
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     NSArray *result = [self getAvailbaleTimeForTargetTime:@[@600, @75]];
     NSLog(@"result:%@", result);
     if (result) {
@@ -39,6 +39,8 @@ HXMacroReigisterService(A_ViewController, RouterURLString_AModule, RouterNamespa
    
     
     UIButton *btns = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 80, 40)];
+    btns.layer.cornerRadius = 10;
+    btns.layer.masksToBounds = YES;
     [btns setImage:[UIImage imageNamed:@"icon_collection"] forState:UIControlStateNormal];
     [btns addTarget:self action:@selector(testImage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btns];
@@ -71,6 +73,35 @@ HXMacroReigisterService(A_ViewController, RouterURLString_AModule, RouterNamespa
     }];
     
     [task resume];
+    
+//    UIButton *btn = [[UIButton alloc] init];
+//    btn setImage:<#(nullable UIImage *)#> forState:<#(UIControlState)#>
+    [self testDic];
+}
+
+- (void)testDic {
+    
+    NSOperationQueue *queue = [NSOperationQueue mainQueue];
+    [queue addOperationWithBlock:^{
+        NSLog(@"3currentThread:%@", [NSThread currentThread]);
+    }];
+    
+    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"1currentThread:%@", [NSThread currentThread]);
+    }];
+    [operation addExecutionBlock:^{
+        NSLog(@"2currentThread:%@", [NSThread currentThread]);
+    }];
+    
+    [queue addOperation:operation];
+    
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+//    for (NSInteger i = 0; i < 100; i++) {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            [dic setObject:@(i+1000)  forKey:@(i)];
+//        });
+//
+//    }
 }
 
  - (NSDictionary *)commonHeaderFiled {

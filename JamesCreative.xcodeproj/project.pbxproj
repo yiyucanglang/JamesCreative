@@ -56,6 +56,14 @@
 		E9A9D1C623D6FDB5007F385F /* ModubleBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A9D1C523D6FDB5007F385F /* ModubleBHandler.m */; };
 		E9A9D1CC23D7380B007F385F /* ModuleCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A9D1CB23D7380B007F385F /* ModuleCHandler.m */; };
 		E9CF4CD523B4A69B0040ED9B /* A_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CF4CD423B4A69A0040ED9B /* A_ViewController.m */; };
+		E9EA8DC9243F17650079A904 /* RAMExport.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA8DC8243F17650079A904 /* RAMExport.m */; };
+		E9EA8DCE243F17850079A904 /* RAMBlockA.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA8DCA243F17850079A904 /* RAMBlockA.m */; };
+		E9EA8DCF243F17850079A904 /* RAMBlockB.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA8DCC243F17850079A904 /* RAMBlockB.m */; };
+		E9EA8DD4243F42650079A904 /* HXUniformLoader.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E9EA8DD1243F42650079A904 /* HXUniformLoader.podspec */; };
+		E9EA8DD5243F42650079A904 /* ONLDynamicLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA8DD3243F42650079A904 /* ONLDynamicLoader.m */; };
+		E9EA8DDD243F42750079A904 /* CommunityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA8DD7243F42750079A904 /* CommunityListViewController.m */; };
+		E9EA8DDE243F42750079A904 /* CommunityHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA8DD8243F42750079A904 /* CommunityHomeViewController.m */; };
+		E9EA8DDF243F42750079A904 /* TestCommunity.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E9EA8DD9243F42750079A904 /* TestCommunity.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +187,21 @@
 		E9CF4CD223B4A5830040ED9B /* ModuleInterfaceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleInterfaceHeader.h; sourceTree = "<group>"; };
 		E9CF4CD323B4A69A0040ED9B /* A_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A_ViewController.h; sourceTree = "<group>"; };
 		E9CF4CD423B4A69A0040ED9B /* A_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = A_ViewController.m; sourceTree = "<group>"; };
+		E9EA8DC7243F17650079A904 /* RAMExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMExport.h; sourceTree = "<group>"; };
+		E9EA8DC8243F17650079A904 /* RAMExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMExport.m; sourceTree = "<group>"; };
+		E9EA8DCA243F17850079A904 /* RAMBlockA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMBlockA.m; sourceTree = "<group>"; };
+		E9EA8DCB243F17850079A904 /* RAMBlockB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMBlockB.h; sourceTree = "<group>"; };
+		E9EA8DCC243F17850079A904 /* RAMBlockB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMBlockB.m; sourceTree = "<group>"; };
+		E9EA8DCD243F17850079A904 /* RAMBlockA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMBlockA.h; sourceTree = "<group>"; };
+		E9EA8DD1243F42650079A904 /* HXUniformLoader.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HXUniformLoader.podspec; sourceTree = "<group>"; };
+		E9EA8DD2243F42650079A904 /* ONLDynamicLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONLDynamicLoader.h; sourceTree = "<group>"; };
+		E9EA8DD3243F42650079A904 /* ONLDynamicLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONLDynamicLoader.m; sourceTree = "<group>"; };
+		E9EA8DD7243F42750079A904 /* CommunityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityListViewController.m; sourceTree = "<group>"; };
+		E9EA8DD8243F42750079A904 /* CommunityHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityHomeViewController.m; sourceTree = "<group>"; };
+		E9EA8DD9243F42750079A904 /* TestCommunity.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestCommunity.podspec; sourceTree = "<group>"; };
+		E9EA8DDA243F42750079A904 /* CommunityModuleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityModuleHeader.h; sourceTree = "<group>"; };
+		E9EA8DDB243F42750079A904 /* CommunityHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityHomeViewController.h; sourceTree = "<group>"; };
+		E9EA8DDC243F42750079A904 /* CommunityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityListViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +383,8 @@
 		E99017862385311C004E7D7D /* JamesCreative */ = {
 			isa = PBXGroup;
 			children = (
+				E9EA8DC6243F17550079A904 /* RAMEXPORT */,
+				E9AB6C692431F09E00721D5A /* ONLDynamicLoader */,
 				557321F023F65B8F00C6DBB4 /* HXNetKit */,
 				557321ED23F4F68A00C6DBB4 /* Resources */,
 				E95F9C0D238BDEB0003D745F /* Test */,
@@ -434,6 +459,51 @@
 				E99017C123856433004E7D7D /* 1242_2688.png */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		E9AB6C692431F09E00721D5A /* ONLDynamicLoader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ONLDynamicLoader;
+			sourceTree = "<group>";
+		};
+		E9EA8DC6243F17550079A904 /* RAMEXPORT */ = {
+			isa = PBXGroup;
+			children = (
+				E9EA8DD6243F42750079A904 /* Community */,
+				E9EA8DD0243F42650079A904 /* HXUniformLoader */,
+				E9EA8DCD243F17850079A904 /* RAMBlockA.h */,
+				E9EA8DCA243F17850079A904 /* RAMBlockA.m */,
+				E9EA8DCB243F17850079A904 /* RAMBlockB.h */,
+				E9EA8DCC243F17850079A904 /* RAMBlockB.m */,
+				E9EA8DC7243F17650079A904 /* RAMExport.h */,
+				E9EA8DC8243F17650079A904 /* RAMExport.m */,
+			);
+			path = RAMEXPORT;
+			sourceTree = "<group>";
+		};
+		E9EA8DD0243F42650079A904 /* HXUniformLoader */ = {
+			isa = PBXGroup;
+			children = (
+				E9EA8DD1243F42650079A904 /* HXUniformLoader.podspec */,
+				E9EA8DD2243F42650079A904 /* ONLDynamicLoader.h */,
+				E9EA8DD3243F42650079A904 /* ONLDynamicLoader.m */,
+			);
+			path = HXUniformLoader;
+			sourceTree = "<group>";
+		};
+		E9EA8DD6243F42750079A904 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				E9EA8DD7243F42750079A904 /* CommunityListViewController.m */,
+				E9EA8DD8243F42750079A904 /* CommunityHomeViewController.m */,
+				E9EA8DD9243F42750079A904 /* TestCommunity.podspec */,
+				E9EA8DDA243F42750079A904 /* CommunityModuleHeader.h */,
+				E9EA8DDB243F42750079A904 /* CommunityHomeViewController.h */,
+				E9EA8DDC243F42750079A904 /* CommunityListViewController.h */,
+			);
+			path = Community;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,11 +612,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EA8DD4243F42650079A904 /* HXUniformLoader.podspec in Resources */,
 				E990179723853120004E7D7D /* LaunchScreen.storyboard in Resources */,
 				E99017C623856638004E7D7D /* 640x960.png in Resources */,
 				E99017C4238565E4004E7D7D /* 1242x2208.png in Resources */,
 				557321EF23F4F6B000C6DBB4 /* Image.bundle in Resources */,
 				E99017C223856434004E7D7D /* 1242_2688.png in Resources */,
+				E9EA8DDF243F42750079A904 /* TestCommunity.podspec in Resources */,
 				E990179423853120004E7D7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,14 +704,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9377195238631AB00CDC588 /* YTKRequest.m in Sources */,
+				E9EA8DC9243F17650079A904 /* RAMExport.m in Sources */,
 				E93675702397ED84007A10CE /* LowTeacher.m in Sources */,
+				E9EA8DDE243F42750079A904 /* CommunityHomeViewController.m in Sources */,
 				55D0EDCA240E76950076290B /* HXCollectionViewTestItemView.m in Sources */,
 				557321F323F65C5F00C6DBB4 /* HXNetRequestGlobalConfig.m in Sources */,
 				E9377193238631AB00CDC588 /* YTKChainRequestAgent.m in Sources */,
+				E9EA8DD5243F42650079A904 /* ONLDynamicLoader.m in Sources */,
 				E95F9C10238BDECF003D745F /* Person.m in Sources */,
 				E990178F2385311C004E7D7D /* ViewController.m in Sources */,
 				559B66CB23FBE1D00097FA46 /* HXNetBaseRequest.m in Sources */,
 				E93771A6238693A900CDC588 /* HXEasyRequestResponse.m in Sources */,
+				E9EA8DCF243F17850079A904 /* RAMBlockB.m in Sources */,
+				E9EA8DCE243F17850079A904 /* RAMBlockA.m in Sources */,
 				E937718D238631AB00CDC588 /* YTKNetworkConfig.m in Sources */,
 				55D0EDCE240F4FC70076290B /* LMJVerticalFlowLayout.m in Sources */,
 				E937718F238631AB00CDC588 /* YTKNetworkPrivate.m in Sources */,
@@ -660,6 +737,7 @@
 				E9377190238631AB00CDC588 /* YTKBaseRequest.m in Sources */,
 				E95F9C13238BDEDC003D745F /* Teacher.m in Sources */,
 				E936756A2397DFB8007A10CE /* Teacher+ZZZ.m in Sources */,
+				E9EA8DDD243F42750079A904 /* CommunityListViewController.m in Sources */,
 				E936756D2397E706007A10CE /* MiddleTeacher+SDASDASD.m in Sources */,
 				E9A9D1C623D6FDB5007F385F /* ModubleBHandler.m in Sources */,
 				5578C6CE2430717D00012C8F /* LeetCodeViewController.m in Sources */,
