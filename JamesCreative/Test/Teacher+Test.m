@@ -22,8 +22,12 @@
 //    return self;
 //}
 
-//- (void)zzzz {
-//    NSLog(@"Teacher (Test) :zzzz");
-//}
+- (void)zzzz {
+    NSLog(@"Teacher (Test) :zzzz");
+}
 
+
+- (void)print:(NSString *)a b:(NSString *)b {
+    NSLog(@"Teacher (Test): a:%@ b:%@", a, b);
+}
 @end

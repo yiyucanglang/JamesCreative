@@ -14,7 +14,11 @@
     NSLog(@"Teacher (ZZZ)");
 }
 
-//- (void)zzzz {
-//    NSLog(@"Teacher (ZZZ) :zzzz");
-//}
+- (void)zzzz {
+    NSLog(@"Teacher (ZZZ) :zzzz");
+}
+
+- (void)print:(NSString *)a b:(NSString *)b {
+    NSLog(@"Teacher (ZZZ): a:%@ b:%@", a, b);
+}
 @end

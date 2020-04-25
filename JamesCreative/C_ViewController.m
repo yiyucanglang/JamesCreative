@@ -10,12 +10,50 @@
 
 #import "ParentRouterHeader.h"
 #import "LMJVerticalFlowLayout.h"
+
+#import <SDWebImage/SDWebImage.h>
+#import "Teacher.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
+
+@interface TimerProxy : NSProxy
+@property (nonatomic, weak) id   forwardTarget;
+
++ (instancetype)initWithForwardTarget:(id)target;
+@end
+
+@implementation TimerProxy
+
++ (instancetype)initWithForwardTarget:(id)target {
+    TimerProxy *proxy = [TimerProxy alloc];
+    proxy.forwardTarget = target;
+    return proxy;
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel{
+    return [self.forwardTarget methodSignatureForSelector:sel];
+}
+- (void)forwardInvocation:(NSInvocation *)invocation{
+    invocation.target = self.forwardTarget;
+    [invocation invoke];
+}
+
+
+
+@end
+
+
+typedef void(^blockTest)(void);
 @import HXConvenientListView;
 
 HXMacroReigisterService(C_ViewController, RouterURLString_CModule, RouterNamespace_JamesTestProject)
 
 @interface C_ViewController ()
 @property (nonatomic, strong) HXConvenientCollectionView *collectionView;
+@property (nonatomic, strong) UIImageView  *imageView;
+@property (nonatomic, strong) UIImageView  *otherImageView;
+@property (nonatomic, strong) NSTimer  *timer;
+
 @end
 
 @implementation C_ViewController
@@ -25,6 +63,87 @@ HXMacroReigisterService(C_ViewController, RouterURLString_CModule, RouterNamespa
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"测试";
     
+//    [self autoLockTest];
+//    [self performTest];
+    [self IMPTest];
+}
+
+#pragma mark - IMP
+- (void)IMPTest {
+    id teacher = [Teacher new];
+//    Method originalMethod = class_getInstanceMethod([Teacher class], @selector(print:b:));
+    
+    IMP imp = class_getMethodImplementation([Teacher class], @selector(print:b:));
+    
+    ((void (*)(id, SEL, NSString *, NSString *)) imp)(teacher, @selector(print:b:), @"aaaaaa", @"bbbbbb");
+    
+    u_int count;
+    //class_copyMethodList 获取类的所有方法列表
+    Method *mothList_f = class_copyMethodList([teacher class],&count) ;
+    for (int i = 0; i < count; i++) {
+        Method temp_f = mothList_f[i];
+        // method_getImplementation 由Method得到IMP函数指针
+        IMP imp_f = method_getImplementation(temp_f);
+        // method_getName由Method得到SEL
+        SEL name_f = method_getName(temp_f);
+
+//        const char * name_s = sel_getName(name_f);
+//        // method_getNumberOfArguments  由Method得到参数个数
+//        int arguments = method_getNumberOfArguments(temp_f);
+//        // method_getTypeEncoding  由Method得到Encoding 类型
+//        const char * encoding = method_getTypeEncoding(temp_f);
+        if (name_f == @selector(print:b:)) {
+            imp = imp_f;
+        }
+//        NSLog(@"方法名：%@\n,参数个数：%d\n,编码方式：%@\n",[NSString stringWithUTF8String:name_s],
+//        arguments,[NSString stringWithUTF8String:encoding]);
+    }
+    free(mothList_f);
+    
+    ((void (*)(id, SEL, NSString *, NSString *)) imp)(teacher, @selector(print:b:), @"aaaaaa", @"bbbbbb");
+    
+    
+    SEL sel = @selector(collectionViewTest); // 先获取方法编号SEL
+    // 这样就可以成功执行方法，相当于[self addSubviewTemp:[UIView new] with:@"Temp"];
+    ((void (*)(id, SEL)) objc_msgSend)(self, sel);
+    
+    [teacher beforeReplace];
+    
+    [self LogAllMethodsFromClass:teacher];
+//    [teacher afterReplace];
+//
+//    [teacher beforeReplace];
+}
+
+//获取类的方法
+- (void)LogAllMethodsFromClass:(id)obj
+{
+    u_int count;
+    //class_copyMethodList 获取类的所有方法列表
+    Method *mothList_f = class_copyMethodList([obj class],&count) ;
+    for (int i = 0; i < count; i++) {
+        Method temp_f = mothList_f[i];
+        // method_getImplementation 由Method得到IMP函数指针
+        IMP imp_f = method_getImplementation(temp_f);
+        // method_getName由Method得到SEL
+        SEL name_f = method_getName(temp_f);
+
+        const char * name_s = sel_getName(name_f);
+        // method_getNumberOfArguments  由Method得到参数个数
+        int arguments = method_getNumberOfArguments(temp_f);
+        // method_getTypeEncoding  由Method得到Encoding 类型
+        const char * encoding = method_getTypeEncoding(temp_f);
+
+        NSLog(@"方法名：%@\n,参数个数：%d\n,编码方式：%@\n",[NSString stringWithUTF8String:name_s],
+        arguments,[NSString stringWithUTF8String:encoding]);
+    }
+    free(mothList_f);
+    
+}
+
+
+#pragma mark - collectionViewTest
+- (void)collectionViewTest {
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -38,9 +157,128 @@ HXMacroReigisterService(C_ViewController, RouterURLString_CModule, RouterNamespa
         [self.collectionView.sourceArr addObject:model];
     }
     [self.collectionView reloadData];
-//    [UIApplication sharedApplication].statusBarStyle
-    [self test];
-    [self autoLockTest];
+}
+
+#pragma mark - sdLoadTheSameImageConcurrentlyTest
+- (void)sdLoadTheSameImageConcurrentlyTest {
+    UIImageView *imageView = [[UIImageView alloc] init];
+      [self.view addSubview:imageView];
+      [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.center.equalTo(self.view);
+          make.size.mas_equalTo(CGSizeMake(100, 100));
+      }];
+      
+      
+      UIImageView *otherImageView = [[UIImageView alloc] init];
+      [self.view addSubview:otherImageView];
+      [otherImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.centerX.equalTo(self.view);
+          make.centerY.equalTo(self.view).with.offset(150);
+          make.size.mas_equalTo(CGSizeMake(100, 100));
+      }];
+      
+      
+      //https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2046313510,2749768343&fm=26&gp=0.jpg
+    //https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587644377304&di=299c298a2d812aa4e038a0883746fcb9&imgtype=0&src=http%3A%2F%2Fpics0.baidu.com%2Ffeed%2F2934349b033b5bb5476c79bbcfdab63fb700bcc8.png%3Ftoken%3Ded8cb4b1262106173efa1d97ff100f71
+      [imageView sd_setImageWithURL:[NSURL URLWithString:@"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2046313510,2749768343&fm=26&gp=0.jpg"] placeholderImage:nil options:SDWebImageFromLoaderOnly completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+          
+      }];
+      
+      [otherImageView sd_setImageWithURL:[NSURL URLWithString:@"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2046313510,2749768343&fm=26&gp=0.jpg"] placeholderImage:nil options:SDWebImageFromLoaderOnly completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+          
+      }];
+      
+      
+      [otherImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587644377304&di=299c298a2d812aa4e038a0883746fcb9&imgtype=0&src=http%3A%2F%2Fpics0.baidu.com%2Ffeed%2F2934349b033b5bb5476c79bbcfdab63fb700bcc8.png%3Ftoken%3Ded8cb4b1262106173efa1d97ff100f71"] placeholderImage:nil options:SDWebImageFromLoaderOnly completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+          
+      }];
+}
+
+#pragma mark - performTest
+- (void)performTest {
+    
+    __weak typeof(self) w_self = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[NSRunLoop currentRunLoop] run];
+        [w_self performSelector:@selector(test:d:) withObject:nil afterDelay:0];
+        
+    });
+    
+
+    NSLog(@"zzzzzzzcurrent:%@", [NSDate date]);
+    TimerProxy *proxy = [TimerProxy initWithForwardTarget:self];
+//    [NSTimer timerWithTimeInterval:1 target:proxy selector:@selector(_timerTriggerred:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:1 target:proxy selector:@selector(_timerTriggerred:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//    [self.timer fire];
+//  self.timer =  [NSTimer scheduledTimerWithTimeInterval:1 target:proxy selector:@selector(_timerTriggerred:) userInfo:nil repeats:YES];
+    NSLog(@"end end end");
+    
+    static NSString *name;
+    if (!name) {
+        name = @"wo shi wugui";
+    }
+    
+    blockTest globalfornothing = ^{
+        NSLog(@"selfsssss");
+    };
+    
+    __weak blockTest globalforself = ^{
+        NSLog(@"self:%@", self);
+    };
+    
+    blockTest globalforstatic = ^{
+        NSLog(@"globalforstatic name:%@", name);
+    };
+    
+    
+    blockTest stackforself = ^{
+        NSLog(@"self:%@", self);
+    };
+    
+    blockTest stackforstatic = ^{
+        NSLog(@"stackforstatic:%@", name);
+    };
+    
+    
+    blockTest sss = ^{
+        NSLog(@"self:%@", self);
+    };
+    NSLog(@"sss:%@", sss);
+    
+}
+
+- (void)_timerTriggerred:(NSTimer *)timer {
+    NSLog(@"current:%@", [NSDate date]);
+    NSLog(@"%s", __FUNCTION__);
+}
+
+#pragma mark - invokeTest
+- (void)invokeTest {
+        NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v@:@@"];
+    //    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v@:dd"];
+    //    signature = [[self class] instanceMethodSignatureForSelector:@selector(invoketTest:b:)];
+    //    signature = [[self class] instanceMethodSignatureForSelector:@selector(test:d:)];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        invocation.target = self;
+    //    id sss = @"sssss";
+        double sss = 123;
+    //    id sss = [NSObject new];
+    //    [invocation setSelector:@selector(test:d:)];
+        [invocation setSelector:@selector(invoketTest:b:)];
+        [invocation setArgument:&sss atIndex:2];
+        [invocation setArgument:&sss atIndex:3];
+        [invocation invoke];
+}
+
+- (void)test:(float)a d:(double)b {
+    NSLog(@"ssssssss");
+}
+
+- (void)invoketTest:(NSObject *)a b:(NSString *)b {
+//    [a substringToIndex:1];
+    
+    
 }
 
 #pragma mark - KMP algorithm
@@ -164,6 +402,13 @@ static void AutoLock(void (^__strong *lockBlock)(void)) {
     }
     return _collectionView;
 
+}
+
+- (void)dealloc
+{
+    [self.timer invalidate];
+    self.timer = nil;
+    NSLog(@"i'm dead");
 }
 
 @end

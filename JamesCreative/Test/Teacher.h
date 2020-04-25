@@ -13,6 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Teacher : Person
 @property (nonatomic, assign) id   delegate;
 - (void)zzzz;
+
+- (void)print:(NSString *)a b:(NSString *)b;
+
+- (void)beforeReplace;
+
+- (void)afterReplace;
+
 @end
 
 NS_ASSUME_NONNULL_END
