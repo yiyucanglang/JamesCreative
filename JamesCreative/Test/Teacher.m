@@ -8,6 +8,8 @@
 
 #import "Teacher.h"
 #import <HXKitComponent/HXMethodSwitch.h>
+#import <objc/runtime.h>
+#import <objc/message.h>
 @implementation Teacher
 + (void)load {
     NSLog(@"Teacher");
@@ -44,6 +46,26 @@
 
 - (void)afterReplace {
     [HXMethodSwitch exchangeInstanceMethodForClass:[self class] sourceMethod:@selector(beforeReplace) destinationMethod:@selector(swizzleBeforeReplace)];
+}
+
+- (void)kvoTest {
+    NSLog(@"kvoTest");
+}
+
+- (instancetype)initWithKVOFlag:(BOOL)flag {
+    __block Class kvoClass;
+    if (flag) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            kvoClass = objc_allocateClassPair(objc_getClass("Teacher"), "KVO_Teacher", 0);
+            objc_registerClassPair(kvoClass);
+            [HXMethodSwitch exchangeInstanceMethodForClass:kvoClass sourceMethod:@selector(kvoTest) destinationMethod:@selector(swizzle_test)];
+        });
+    }
+    if (!kvoClass) {
+        kvoClass = [Teacher class];
+    }
+    return [[kvoClass alloc] init];
 }
 
 - (void)swizzleBeforeReplace {

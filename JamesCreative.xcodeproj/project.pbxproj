@@ -55,6 +55,7 @@
 		E99017C623856638004E7D7D /* 640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = E99017C523856637004E7D7D /* 640x960.png */; };
 		E9A44EE52451773A00C94020 /* Net_README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9A44EE42451773A00C94020 /* Net_README.md */; };
 		E9A44EE92451872600C94020 /* 1587629939861_8A6B3FB8-666E-450C-A750-F135B63CAE03.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A44EE82451872600C94020 /* 1587629939861_8A6B3FB8-666E-450C-A750-F135B63CAE03.png */; };
+		E9A8D2F42456B05C000E5823 /* SwiftListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8D2F32456B05C000E5823 /* SwiftListViewController.swift */; };
 		E9A9D1C623D6FDB5007F385F /* ModubleBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A9D1C523D6FDB5007F385F /* ModubleBHandler.m */; };
 		E9A9D1CC23D7380B007F385F /* ModuleCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A9D1CB23D7380B007F385F /* ModuleCHandler.m */; };
 		E9CF4CD523B4A69B0040ED9B /* A_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CF4CD423B4A69A0040ED9B /* A_ViewController.m */; };
@@ -175,6 +176,8 @@
 		E99017C523856637004E7D7D /* 640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 640x960.png; sourceTree = "<group>"; };
 		E9A44EE42451773A00C94020 /* Net_README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Net_README.md; sourceTree = "<group>"; };
 		E9A44EE82451872600C94020 /* 1587629939861_8A6B3FB8-666E-450C-A750-F135B63CAE03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1587629939861_8A6B3FB8-666E-450C-A750-F135B63CAE03.png"; sourceTree = "<group>"; };
+		E9A8D2F22456B05C000E5823 /* JamesCreative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JamesCreative-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9A8D2F32456B05C000E5823 /* SwiftListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftListViewController.swift; sourceTree = "<group>"; };
 		E9A9D1C323D69E9A007F385F /* ParentRouterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParentRouterHeader.h; sourceTree = "<group>"; };
 		E9A9D1C423D6FDB5007F385F /* ModubleBHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModubleBHandler.h; sourceTree = "<group>"; };
 		E9A9D1C523D6FDB5007F385F /* ModubleBHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModubleBHandler.m; sourceTree = "<group>"; };
@@ -387,6 +390,7 @@
 				E9CF4CD423B4A69A0040ED9B /* A_ViewController.m */,
 				55D0EDC5240E6C630076290B /* C_ViewController.h */,
 				55D0EDC6240E6C630076290B /* C_ViewController.m */,
+				E9A8D2F32456B05C000E5823 /* SwiftListViewController.swift */,
 				5578C6CC2430717C00012C8F /* LeetCodeViewController.h */,
 				5578C6CD2430717C00012C8F /* LeetCodeViewController.m */,
 				55D0EDC8240E76950076290B /* HXCollectionViewTestItemView.h */,
@@ -400,6 +404,7 @@
 				E990179523853120004E7D7D /* LaunchScreen.storyboard */,
 				E990179823853120004E7D7D /* Info.plist */,
 				E990179923853120004E7D7D /* main.m */,
+				E9A8D2F22456B05C000E5823 /* JamesCreative-Bridging-Header.h */,
 			);
 			path = JamesCreative;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				TargetAttributes = {
 					E99017832385311C004E7D7D = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					E990179E23853120004E7D7D = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -688,6 +694,7 @@
 				E93771662386301600CDC588 /* HXFileManager.m in Sources */,
 				E9377191238631AB00CDC588 /* YTKBatchRequest.m in Sources */,
 				E9CF4CD523B4A69B0040ED9B /* A_ViewController.m in Sources */,
+				E9A8D2F42456B05C000E5823 /* SwiftListViewController.swift in Sources */,
 				E9A9D1CC23D7380B007F385F /* ModuleCHandler.m in Sources */,
 				E9377190238631AB00CDC588 /* YTKBaseRequest.m in Sources */,
 				E95F9C13238BDEDC003D745F /* Teacher.m in Sources */,
@@ -812,8 +819,10 @@
 			baseConfigurationReference = 326A51649B1D44AEDA470F3F /* Pods-JamesCreative.uat.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 255T83HNNK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = JamesCreative/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -822,6 +831,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JamesCreative/JamesCreative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = UAT;
@@ -829,6 +841,7 @@
 		557690D42403BD0700AF7C9C /* UAT */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G85P225WDH;
@@ -849,6 +862,7 @@
 		557690D52403BD0700AF7C9C /* UAT */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G85P225WDH;
 				INFOPLIST_FILE = JamesCreativeUITests/Info.plist;
@@ -979,8 +993,10 @@
 			baseConfigurationReference = A00951A9852759B125A27D98 /* Pods-JamesCreative.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 255T83HNNK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = JamesCreative/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -989,6 +1005,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JamesCreative/JamesCreative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -998,8 +1017,10 @@
 			baseConfigurationReference = 27BE14BF80375A1DAA948F8B /* Pods-JamesCreative.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 255T83HNNK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = JamesCreative/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1008,6 +1029,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yijin.xiaohuanxiong.JamesCreativssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JamesCreative/JamesCreative-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1015,6 +1038,7 @@
 		E99017B723853120004E7D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G85P225WDH;
@@ -1035,6 +1059,7 @@
 		E99017B823853120004E7D7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G85P225WDH;
@@ -1055,6 +1080,7 @@
 		E99017BA23853120004E7D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G85P225WDH;
 				INFOPLIST_FILE = JamesCreativeUITests/Info.plist;
@@ -1073,6 +1099,7 @@
 		E99017BB23853120004E7D7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G85P225WDH;
 				INFOPLIST_FILE = JamesCreativeUITests/Info.plist;

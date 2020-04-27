@@ -47,4 +47,5 @@ pod 'DHXRouter', '1.0.0'
 #pod 'TestCommunity', :path => '/Users/yijin/Documents/A_DHX/HXRouter/HXRouterDemo/Community'
 #pod 'HXUniformLoader', :path => '/Users/yijin/Documents/A_DHX/HXUniformLoader'
 pod 'SuperPlayer'
+pod 'SnapKit', '~> 4.2.0'
 end

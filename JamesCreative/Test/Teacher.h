@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)afterReplace;
 
+- (void)kvoTest;
+
+
+- (instancetype)initWithKVOFlag:(BOOL)flag;
+
 @end
 
 NS_ASSUME_NONNULL_END

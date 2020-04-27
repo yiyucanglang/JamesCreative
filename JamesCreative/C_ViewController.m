@@ -68,6 +68,10 @@ HXMacroReigisterService(C_ViewController, RouterURLString_CModule, RouterNamespa
     [self IMPTest];
 }
 
+
+#pragma mark - KVO
+
+
 #pragma mark - IMP
 - (void)IMPTest {
     id teacher = [Teacher new];

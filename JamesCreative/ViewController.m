@@ -89,12 +89,17 @@ NSString *const XXVCLoginSuccessNotification = @"sssss";
     NSLog(@"url:%@", url);
     
     UIFont *ddd = [UIFont fontWithName:@"ddddd" size:20];
+    NSString *ssssssss = @"中国人Dog!🐶";
     
     HXNetRequest *req = [HXNetRequest new];
 //    req.requestURLString = @"sssss";
     NSInteger sss = -1;
     if (sss) {
         NSLog(@"zzzzzzzzzz");
+    }
+    
+    if (2) {
+        
     }
     
     
